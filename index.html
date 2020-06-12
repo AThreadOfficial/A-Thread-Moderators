@@ -1,0 +1,3636 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap 4 Website Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+    />
+
+
+
+  <style>
+  .fakeimg {
+    height: 200px;
+    background: #aaa;
+  }
+
+  .bgcolor {
+    background: #060a1f;
+  }
+
+  .img1{
+  height: 50vh;
+  width: 90vw;
+  border-radius: 50px;
+  }
+
+  .img2{
+  height: 31.5vh;
+  width: 25.5vw;
+  border-radius: 50px;
+  }
+
+  .img3{
+  height: 31.5vh;
+  width: 53.5vw;
+  border-radius: 50px;
+  }
+
+  .size1{
+  height: 31.5vh;
+  width: 25.5vw;
+  }
+
+  .size2{
+  height: 31.5vh;
+  width: 25.5vw;
+  }
+
+  .body{
+  align-items: center;
+  }
+
+
+
+
+
+  #clock #time{
+    display:flex;
+  }
+
+  #clock #time .divclock{
+    position:relative;
+    margin:0 6px;
+    -webkit-box-reflect:below .1vh linear-gradient(transparent, #0004);
+  }
+
+  #clock #time .divclock .spanclock{
+    position:relative;
+    display:block;
+    width: 107px;
+    height: 85px;
+    background:#2196f3;
+    color:#fff;
+    font-weight:300;
+    text-align:center;
+    justify-content:center;
+    align-items:center;
+    font-size: 45px;
+    z-index:10;
+    box-shadow:0  0 0 0px rgba(0, 0, 0, .2);
+  }
+
+  #clock #time .divclock .spanclock:nth-child(2){
+    height: 35px;
+    line-height: 33px;
+    font-size: 11.3px;
+    letter-spacing: 2px;
+    font-weight:500;
+    z-index:9;
+    box-shadow:none;
+    background:#127fd6;
+    text-transform:uppercase;
+  }
+
+  #clock #time .divclock:last-child .spanclock{
+    background:#ff006a;
+  }
+
+  #clock #time .divclock:last-child .spanclock:nth-child(2){
+    background:#ec0062;
+  }
+
+  #clock #time .divclock .spanclock:nth-child(1){
+    line-height:80px;
+  }
+
+  .atime{
+  color: #24c2cb;
+  }
+
+  .h2time{
+  color: #dfac1d; 
+  text-align: center;
+  }
+
+  .transcolor{
+  color: transparent;
+  }
+
+  .clockposition{
+  text-align: center;
+  }
+
+
+
+
+
+
+
+
+
+
+  .ul {
+    list-style: none;
+    padding-left: 0; 
+  }
+  .footer { 
+    background-color: #555;
+    color: #bbb;
+    line-height: 1.5;
+  }
+  .footer .a {
+    text-decoration: none;
+    color: #eee;
+  }
+  .a:hover {
+    text-decoration: underline;
+  }
+  .ft-title {
+    color: #fff;
+    font-family: ’Merriweather’, serif;
+    font-size: 1.375rem;
+    padding-bottom: 0.625rem;
+  }
+
+  .container {
+    flex: 1;    /* same as flex-grow: 1; */
+  }
+  .ft-main {
+    padding: 1.25rem 1.875rem;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .ft-main-item {
+    padding: 1.25rem;
+    min-width: 12.5rem /*200px*/;
+  }
+  @media only screen and (min-width: 29.8125rem /*477px*/) {
+    .ft-main {
+        justify-content: space-around;
+    }
+  }
+  @media only screen and (min-width: 77.5rem /*1240px*/ ) {
+    .ft-main {
+        justify-content: space-evenly;
+    }
+  }
+  .form {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .input[type="email"] {
+    border: 0;
+    padding: 0.625rem;
+    margin-top: 0.3125rem;
+  }
+  .input[type="submit"] {
+    background-color: #00d188;
+    color: #fff;
+    cursor: pointer;
+    border: 0;
+    padding: 0.625rem 0.9375rem;
+    margin-top: 0.3125rem;
+  }
+  .ft-legal {
+    padding: 0.9375rem 1.875rem;
+    background-color: #333;
+  }
+  .ft-legal-list {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .ft-legal-list .lifoot {
+    margin: 0.125rem 0.625rem;
+    white-space: nowrap;
+  }
+/* one before the last child */
+  .ft-legal-list .lifoot:nth-last-child(2) {
+    flex: 1;       /* same as flex-grow: 1; */
+  }
+  .ft-social {
+    padding: 0 1.875rem 1.25rem;
+  }
+  .ft-social-list {
+    display: flex;
+    justify-content: center;
+    border-top: 1px #777 solid; 
+    padding-top: 1.25rem;
+  }
+  .ft-social-list .lifoot {
+    margin: 0.5rem;
+    font-size: 1.25rem;
+  }
+
+  .outs{
+  text-align: center;
+  }
+  
+  .ins{
+  display: inline-block;
+  margin: 0 auto
+  }
+
+
+
+
+
+
+
+
+
+
+  .card1-container{
+  width:300px;
+  height:400px;
+  border-radius:4px;
+  perspective:980px;
+  background-color:transparent;
+  }
+    
+  .card1{
+  position:relative;
+  width:100%;
+  height:100%;
+  transition:all .7s;
+  transform-style:preserve-3d;
+  }
+    
+  .card1-container:hover .card1{
+  transform:rotateY(-180deg);
+  }
+    
+  .front1{
+  background:linear-gradient(15deg , #4d4ef5 , #72f3ee);
+  }
+    
+  .back1{
+  background:linear-gradient(135deg, #f35efa , #59fbfe);
+  transform:rotateY(-180deg);
+  }
+    
+  .front1, .back1{
+  position:absolute;
+  width:100%;
+  height:100%;
+  display:flex;
+  /*align-items:center;
+  justify-content:center;*/
+  color:white;
+  border-radius:4px;
+  box-shadow:0 10px 20px rgba(0, 0, 0, .19),
+                         0 6px 6px rgba(0, 0, 0,.23);
+                         backface-visibility:hidden;
+                         }
+    
+  .id1{
+  position: absolute;
+  bottom: 110px;
+  left: 50px;
+  /*transform: translateX(-50%);*/
+  }
+  
+  .id1 .spanid1{
+  color:#ffffff;
+  font-size:15px;
+  font-weight:bolder;
+  letter-spacing:1px;
+  animation: light 3s infinite;
+  }
+      
+  @keyframes light{
+      
+    0%, 20%{
+    color:#fee5e9;
+    text-shadow: 0 0 10px #d03f4a;
+    }
+      
+    40%{
+    color:#f4f3f5;
+    text-shadow:0 0 10px #1b3ba8;
+    }
+      
+    60%{
+    color:#caa074;
+    text-shadow:0 0 10px #2f1704;
+    }
+      
+    80%{
+    color:#8a98ae;
+    text-shadow:0 0 10px #283446;
+    }
+      
+    100%{
+    color:#efeeb5;
+    text-shadow:0 0 10px #2a290c;
+    }
+  }
+      
+  .spanid1:nth-child(1){
+  animation-delay: .2s;
+  }
+    
+  .spanid1:nth-child(2){
+  animation-delay: .4s;
+  }
+    
+  .spanid1:nth-child(3){
+  animation-delay: .6;
+  }
+    
+  .spanid1:nth-child(4){
+  animation-delay: .8s;
+  }
+    
+  .spanid1:nth-child(5){
+  animation-delay: 1s;
+  }
+
+  .spanid1:nth-child(6){
+  animation-delay: 1.2s;
+  }
+    
+  .spanid1:nth-child(7){
+  animation-delay: 1.4;
+  }
+    
+  .spanid1:nth-child(8){
+  animation-delay: 1.6s;
+  }
+    
+  .spanid1:nth-child(9){
+  animation-delay: 1.8s;
+  }
+
+  .spanid1:nth-child(10){
+  animation-delay: 2s;
+  }
+    
+  .spanid1:nth-child(11){
+  animation-delay: 2.2;
+  }
+    
+  .spanid1:nth-child(12){
+  animation-delay: 2.4s;
+  }
+    
+  .spanid1:nth-child(13){
+  animation-delay: 2.6s;
+  }
+
+  .img4 {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  top: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  }
+
+  .adminsign1 {
+  position: absolute;
+  bottom: 160px;
+  left: 50%;
+  transform: translateX(-50%);
+  }
+  .adminsign1 .aadminsign1 {
+  text-decoration: none;
+  padding: 10px 30px;
+  color: #3ffc5b;
+  border: solid 3px #3ffc5b;
+  border-radius: 18px;
+  }
+
+  .mottosign1 {
+  position: absolute;
+  bottom: 280px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #3ffc5b;
+  font-size: 30px;
+  }
+
+  .motto1{
+  position: absolute;
+  bottom: 150px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #ec66fa;
+  font-size: 18px;
+  }
+
+  .motto12{
+  position: absolute;
+  bottom: 220px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #ff006a;
+  font-size: 18px;
+  }
+
+  .motto13{
+  position: absolute;
+  bottom: 190px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #ff006a;
+  font-size: 18px;
+  }
+
+  .motto14{
+  position: absolute;
+  bottom: 155px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #ff006a;
+  font-size: 18px;
+  }
+
+  .motto15{
+  position: absolute;
+  bottom: 120px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #ff006a;
+  font-size: 18px;
+  }
+
+  .iconsid1 {
+  position: absolute;
+  bottom: 20px;
+  height: 100px;
+  width: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  }
+  
+  .linkid1{
+  position:relative;
+  display:block;
+  width:40px;
+  height:40px;
+  font-size:20px;
+  line-height:40px;
+  background:#1b1b1b;
+  margin:7px;
+  cursor:pointer;
+  border-radius:50%;
+  text-align:center;
+  box-shadow:0 2px 3px rgba(0,0,0,1), inset 0 -1px 4px rgba(0,0,0,1),
+  inset 1px -1px  4px rgba(0,0,0,1), inset 1px -1px 6px 0  rgba(225,225,225,.5),
+  0 0 1px 1px #000,0 0 1px 4px #0c0c0c,0 0 0 4px #080808;
+  transition:.4s;
+  color: #7e57c2;
+  }
+
+  .linkid1:before{
+  position:absolute:
+  content: " ";
+  top:0;
+  left:0;
+  background:cadetblue;
+  height:100%;
+  width:100%;
+  border-radius:50%;
+  z-index:-2;
+  transform:scale(0.5);
+  transition:0.3s;
+  }
+
+  .linkid1:hover:before{
+  filter:blur(3px);
+  transform:scale(1.2);
+  box-shadow:0 0 9 rgba(0,0,0,1), inset 0 -1px 4px rbga(0,0,0,1), inset 0px 1px rgba(225,225,225,.1),
+  0 0 0 1px #000,0 0 0 1px #0095ff,0 0 9px 8px #0095ff;
+  }
+
+  .linkid1:hover {
+  color:#0095ff;  
+  }
+
+
+
+
+
+
+  .card2-container{
+  width:300px;
+  height:400px;
+  border-radius:4px;
+  perspective:980px;
+  background-color:transparent;
+  }
+    
+  .card2{
+  position:relative;
+  width:100%;
+  height:100%;
+  transition:all .7s;
+  transform-style:preserve-3d;
+  }
+    
+  .card2-container:hover .card2{
+  transform:rotateY(-180deg);
+  }
+    
+  .front2{
+  background:linear-gradient(135deg , #fe5dfd , #f7fa63);
+  }
+    
+  .back2{
+  background:linear-gradient(135deg, #fc6efa , #fe5758);
+  transform:rotateY(-180deg);
+  }
+    
+  .front2 , .back2{
+  position:absolute;
+  width:100%;
+  height:100%;
+  display:flex;
+  /*align-items:center;
+  justify-content:center;*/
+  color:white;
+  border-radius:4px;
+  box-shadow:0 10px 20px rgba(0, 0, 0, .19),
+                         0 6px 6px rgba(0, 0, 0,.23);
+                         backface-visibility:hidden;
+                         }
+
+  .id2{
+  position: absolute;
+  bottom: 110px;
+  left: 50px;
+  /*transform: translateX(-50%);*/
+  }
+  
+  .id2 .spanid2{
+  color:#ffffff;
+  font-size:15px;
+  font-weight:bolder;
+  letter-spacing:1px;
+  animation: light 3s infinite;
+  }
+      
+  @keyframes light{
+      
+    0%, 20%{
+    color:#fee5e9;
+    text-shadow: 0 0 10px #d03f4a;
+    }
+      
+    40%{
+    color:#f4f3f5;
+    text-shadow:0 0 10px #1b3ba8;
+    }
+      
+    60%{
+    color:#caa074;
+    text-shadow:0 0 10px #2f1704;
+    }
+      
+    80%{
+    color:#8a98ae;
+    text-shadow:0 0 10px #283446;
+    }
+      
+    100%{
+    color:#efeeb5;
+    text-shadow:0 0 10px #2a290c;
+    }
+  }
+      
+  .spanid2:nth-child(1){
+  animation-delay: .2s;
+  }
+    
+  .spanid2:nth-child(2){
+  animation-delay: .4s;
+  }
+    
+  .spanid2:nth-child(3){
+  animation-delay: .6;
+  }
+    
+  .spanid2:nth-child(4){
+  animation-delay: .8s;
+  }
+    
+  .spanid2:nth-child(5){
+  animation-delay: 1s;
+  }
+
+  .spanid2:nth-child(6){
+  animation-delay: 1.2s;
+  }
+    
+  .spanid2:nth-child(7){
+  animation-delay: 1.4;
+  }
+    
+  .spanid2:nth-child(8){
+  animation-delay: 1.6s;
+  }
+    
+  .spanid2:nth-child(9){
+  animation-delay: 1.8s;
+  }
+
+  .spanid1:nth-child(10){
+  animation-delay: 2s;
+  }
+    
+  .spanid1:nth-child(11){
+  animation-delay: 2.2;
+  }
+    
+  .spanid1:nth-child(12){
+  animation-delay: 2.4s;
+  }
+    
+  .spanid1:nth-child(13){
+  animation-delay: 2.6s;
+  }
+
+  .img5 {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  top: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  }
+
+  .adminsign2 {
+  position: absolute;
+  bottom: 160px;
+  left: 50%;
+  transform: translateX(-50%);
+  }
+  .adminsign2 .aadminsign2 {
+  text-decoration: none;
+  padding: 10px 30px;
+  color: #3ffc5b;
+  border: solid 3px #3ffc5b;
+  border-radius: 18px;
+  }
+
+  .mottosign2 {
+  position: absolute;
+  bottom: 280px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #3ffc5b;
+  font-size: 30px;
+  }
+
+  .motto2{
+  position: absolute;
+  bottom: 150px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #ec66fa;
+  font-size: 18px;
+  }
+
+  .motto22{
+  position: absolute;
+  bottom: 220px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #42ecf5;
+  font-size: 18px;
+  }
+
+  .motto23{
+  position: absolute;
+  bottom: 190px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #42ecf5;
+  font-size: 18px;
+  }
+
+  .motto24{
+  position: absolute;
+  bottom: 155px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #42ecf5;
+  font-size: 18px;
+  }
+
+  .motto25{
+  position: absolute;
+  bottom: 120px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #42ecf5;
+  font-size: 18px;
+  }
+
+  .iconsid2 {
+  position: absolute;
+  bottom: 20px;
+  height: 100px;
+  width: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  }
+  
+  .linkid2{
+  position:relative;
+  display:block;
+  width:40px;
+  height:40px;
+  font-size:20px;
+  line-height:40px;
+  background:#1b1b1b;
+  margin:7px;
+  cursor:pointer;
+  border-radius:50%;
+  text-align:center;
+  box-shadow:0 2px 3px rgba(0,0,0,1), inset 0 -1px 4px rgba(0,0,0,1),
+  inset 1px -1px  4px rgba(0,0,0,1), inset 1px -1px 6px 0  rgba(225,225,225,.5),
+  0 0 1px 1px #000,0 0 1px 4px #0c0c0c,0 0 0 4px #080808;
+  transition:.4s;
+  color: #f7979a;
+  }
+
+  .linkid2:before{
+  position:absolute:
+  content: " ";
+  top:0;
+  left:0;
+  background:cadetblue;
+  height:100%;
+  width:100%;
+  border-radius:50%;
+  z-index:-2;
+  transform:scale(0.5);
+  transition:0.3s;
+  }
+
+  .linkid2:hover:before{
+  filter:blur(3px);
+  transform:scale(1.2);
+  box-shadow:0 0 9 rgba(0,0,0,1), inset 0 -1px 4px rbga(0,0,0,1), inset 0px 1px rgba(225,225,225,.1),
+  0 0 0 1px #000,0 0 0 1px #0095ff,0 0 9px 8px #0095ff;
+  }
+
+  .linkid2:hover {
+  color:#0095ff;  
+  }
+
+
+
+
+
+  .card3-container{
+  width:300px;
+  height:400px;
+  border-radius:4px;
+  perspective:980px;
+  background-color:transparent;
+  }
+    
+  .card3{
+  position:relative;
+  width:100%;
+  height:100%;
+  transition:all .7s;
+  transform-style:preserve-3d;
+  }
+    
+  .card3-container:hover .card3{
+  transform:rotateY(-180deg);
+  }
+    
+  .front3{
+  background:linear-gradient(15deg , #4d4ef5 , #72f3ee);
+  }
+    
+  .back3{
+  background:linear-gradient(135deg, #f35efa , #59fbfe);
+  transform:rotateY(-180deg);
+  }
+    
+  .front3 , .back3{
+  position:absolute;
+  width:100%;
+  height:100%;
+  display:flex;
+  /*align-items:center;
+  justify-content:center;*/
+  color:white;
+  border-radius:4px;
+  box-shadow:0 10px 20px rgba(0, 0, 0, .19),
+                         0 6px 6px rgba(0, 0, 0,.23);
+                         backface-visibility:hidden;
+                         }
+
+  .id3{
+  position: absolute;
+  bottom: 110px;
+  left: 50px;
+  /*transform: translateX(-50%);*/
+  }
+  
+  .id3 .spanid3{
+  color:#ffffff;
+  font-size:15px;
+  font-weight:bolder;
+  letter-spacing:1px;
+  animation: light 3s infinite;
+  }
+      
+  @keyframes light{
+      
+    0%, 20%{
+    color:#fee5e9;
+    text-shadow: 0 0 10px #d03f4a;
+    }
+      
+    40%{
+    color:#f4f3f5;
+    text-shadow:0 0 10px #1b3ba8;
+    }
+      
+    60%{
+    color:#caa074;
+    text-shadow:0 0 10px #2f1704;
+    }
+      
+    80%{
+    color:#8a98ae;
+    text-shadow:0 0 10px #283446;
+    }
+      
+    100%{
+    color:#efeeb5;
+    text-shadow:0 0 10px #2a290c;
+    }
+  }
+      
+  .spanid3:nth-child(1){
+  animation-delay: .2s;
+  }
+    
+  .spanid3:nth-child(2){
+  animation-delay: .4s;
+  }
+    
+  .spanid3:nth-child(3){
+  animation-delay: .6;
+  }
+    
+  .spanid3:nth-child(4){
+  animation-delay: .8s;
+  }
+    
+  .spanid3:nth-child(5){
+  animation-delay: 1s;
+  }
+
+  .spanid3:nth-child(6){
+  animation-delay: 1.2s;
+  }
+    
+  .spanid3:nth-child(7){
+  animation-delay: 1.4;
+  }
+    
+  .spanid3:nth-child(8){
+  animation-delay: 1.6s;
+  }
+    
+  .spanid3:nth-child(9){
+  animation-delay: 1.8s;
+  }
+
+  .spanid1:nth-child(10){
+  animation-delay: 2s;
+  }
+    
+  .spanid1:nth-child(11){
+  animation-delay: 2.2;
+  }
+    
+  .spanid1:nth-child(12){
+  animation-delay: 2.4s;
+  }
+    
+  .spanid1:nth-child(13){
+  animation-delay: 2.6s;
+  }
+
+  .img6 {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  top: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  }
+
+  .adminsign3 {
+  position: absolute;
+  bottom: 160px;
+  left: 50%;
+  transform: translateX(-50%);
+  }
+  .adminsign3 .aadminsign3 {
+  text-decoration: none;
+  padding: 10px 30px;
+  color: #3ffc5b;
+  border: solid 3px #3ffc5b;
+  border-radius: 18px;
+  }
+
+  .mottosign3 {
+  position: absolute;
+  bottom: 280px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #3ffc5b;
+  font-size: 30px;
+  }
+
+  .motto3{
+  position: absolute;
+  bottom: 150px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #ec66fa;
+  font-size: 18px;
+  }
+
+  .motto32{
+  position: absolute;
+  bottom: 220px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #ff006a;
+  font-size: 18px;
+  }
+
+  .motto33{
+  position: absolute;
+  bottom: 190px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #ff006a;
+  font-size: 18px;
+  }
+
+  .motto34{
+  position: absolute;
+  bottom: 155px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #ff006a;
+  font-size: 18px;
+  }
+
+  .motto35{
+  position: absolute;
+  bottom: 120px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #ff006a;
+  font-size: 18px;
+  }
+
+  .iconsid3 {
+  position: absolute;
+  bottom: 20px;
+  height: 100px;
+  width: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  }
+  
+  .linkid3{
+  position:relative;
+  display:block;
+  width:40px;
+  height:40px;
+  font-size:20px;
+  line-height:40px;
+  background:#1b1b1b;
+  margin:7px;
+  cursor:pointer;
+  border-radius:50%;
+  text-align:center;
+  box-shadow:0 2px 3px rgba(0,0,0,1), inset 0 -1px 4px rgba(0,0,0,1),
+  inset 1px -1px  4px rgba(0,0,0,1), inset 1px -1px 6px 0  rgba(225,225,225,.5),
+  0 0 1px 1px #000,0 0 1px 4px #0c0c0c,0 0 0 4px #080808;
+  transition:.4s;
+  color: #7e57c2;
+  }
+
+  .linkid3:before{
+  position:absolute:
+  content: " ";
+  top:0;
+  left:0;
+  background:cadetblue;
+  height:100%;
+  width:100%;
+  border-radius:50%;
+  z-index:-2;
+  transform:scale(0.5);
+  transition:0.3s;
+  }
+
+  .linkid3:hover:before{
+  filter:blur(3px);
+  transform:scale(1.2);
+  box-shadow:0 0 9 rgba(0,0,0,1), inset 0 -1px 4px rbga(0,0,0,1), inset 0px 1px rgba(225,225,225,.1),
+  0 0 0 1px #000,0 0 0 1px #0095ff,0 0 9px 8px #0095ff;
+  }
+
+  .linkid3:hover {
+  color:#0095ff;  
+  }
+
+
+
+
+
+  .card4-container{
+  width:300px;
+  height:400px;
+  border-radius:4px;
+  perspective:980px;
+  background-color:transparent;
+  }
+    
+  .card4{
+  position:relative;
+  width:100%;
+  height:100%;
+  transition:all .7s;
+  transform-style:preserve-3d;
+  }
+    
+  .card4-container:hover .card4{
+  transform:rotateY(-180deg);
+  }
+    
+  .front4{
+  background:linear-gradient(135deg , #fe5dfd , #f7fa63);
+  }
+    
+  .back4{
+  background:linear-gradient(135deg, #fc6efa , #fe5758);
+  transform:rotateY(-180deg);
+  }
+    
+  .front4 , .back4{
+  position:absolute;
+  width:100%;
+  height:100%;
+  display:flex;
+  /*align-items:center;
+  justify-content:center;*/
+  color:white;
+  border-radius:4px;
+  box-shadow:0 10px 20px rgba(0, 0, 0, .19),
+                         0 6px 6px rgba(0, 0, 0,.23);
+                         backface-visibility:hidden;
+                         }
+
+  .id4{
+  position: absolute;
+  bottom: 110px;
+  left: 50px;
+  /*transform: translateX(-50%);*/
+  }
+  
+  .id4 .spanid4{
+  color:#ffffff;
+  font-size:15px;
+  font-weight:bolder;
+  letter-spacing:1px;
+  animation: light 3s infinite;
+  }
+      
+  @keyframes light{
+      
+    0%, 20%{
+    color:#fee5e9;
+    text-shadow: 0 0 10px #d03f4a;
+    }
+      
+    40%{
+    color:#f4f3f5;
+    text-shadow:0 0 10px #1b3ba8;
+    }
+      
+    60%{
+    color:#caa074;
+    text-shadow:0 0 10px #2f1704;
+    }
+      
+    80%{
+    color:#8a98ae;
+    text-shadow:0 0 10px #283446;
+    }
+      
+    100%{
+    color:#efeeb5;
+    text-shadow:0 0 10px #2a290c;
+    }
+  }
+      
+  .spanid4:nth-child(1){
+  animation-delay: .2s;
+  }
+    
+  .spanid4:nth-child(2){
+  animation-delay: .4s;
+  }
+    
+  .spanid4:nth-child(3){
+  animation-delay: .6;
+  }
+    
+  .spanid4:nth-child(4){
+  animation-delay: .8s;
+  }
+    
+  .spanid4:nth-child(5){
+  animation-delay: 1s;
+  }
+
+  .spanid4:nth-child(6){
+  animation-delay: 1.2s;
+  }
+    
+  .spanid4:nth-child(7){
+  animation-delay: 1.4;
+  }
+    
+  .spanid4:nth-child(8){
+  animation-delay: 1.6s;
+  }
+    
+  .spanid4:nth-child(9){
+  animation-delay: 1.8s;
+  }
+
+  .spanid1:nth-child(10){
+  animation-delay: 2s;
+  }
+    
+  .spanid1:nth-child(11){
+  animation-delay: 2.2;
+  }
+    
+  .spanid1:nth-child(12){
+  animation-delay: 2.4s;
+  }
+    
+  .spanid1:nth-child(13){
+  animation-delay: 2.6s;
+  }
+
+  .img7 {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  top: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  }
+
+  .adminsign4 {
+  position: absolute;
+  bottom: 160px;
+  left: 50%;
+  transform: translateX(-50%);
+  }
+  .adminsign4 .aadminsign4 {
+  text-decoration: none;
+  padding: 10px 30px;
+  color: #3ffc5b;
+  border: solid 3px #3ffc5b;
+  border-radius: 18px;
+  }
+
+  .mottosign4 {
+  position: absolute;
+  bottom: 280px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #3ffc5b;
+  font-size: 30px;
+  }
+
+  .motto4{
+  position: absolute;
+  bottom: 150px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #ec66fa;
+  font-size: 18px;
+  }
+
+  .motto42{
+  position: absolute;
+  bottom: 220px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #42ecf5;
+  font-size: 18px;
+  }
+
+  .motto43{
+  position: absolute;
+  bottom: 190px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #42ecf5;
+  font-size: 18px;
+  }
+
+  .motto44{
+  position: absolute;
+  bottom: 155px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #42ecf5;
+  font-size: 18px;
+  }
+
+  .motto45{
+  position: absolute;
+  bottom: 120px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #42ecf5;
+  font-size: 18px;
+  }
+
+  .iconsid4 {
+  position: absolute;
+  bottom: 20px;
+  height: 100px;
+  width: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  }
+  
+  .linkid4{
+  position:relative;
+  display:block;
+  width:40px;
+  height:40px;
+  font-size:20px;
+  line-height:40px;
+  background:#1b1b1b;
+  margin:7px;
+  cursor:pointer;
+  border-radius:50%;
+  text-align:center;
+  box-shadow:0 2px 3px rgba(0,0,0,1), inset 0 -1px 4px rgba(0,0,0,1),
+  inset 1px -1px  4px rgba(0,0,0,1), inset 1px -1px 6px 0  rgba(225,225,225,.5),
+  0 0 1px 1px #000,0 0 1px 4px #0c0c0c,0 0 0 4px #080808;
+  transition:.4s;
+  color: #f7979a;
+  }
+
+  .linkid4:before{
+  position:absolute:
+  content: " ";
+  top:0;
+  left:0;
+  background:cadetblue;
+  height:100%;
+  width:100%;
+  border-radius:50%;
+  z-index:-2;
+  transform:scale(0.5);
+  transition:0.3s;
+  }
+
+  .linkid4:hover:before{
+  filter:blur(3px);
+  transform:scale(1.2);
+  box-shadow:0 0 9 rgba(0,0,0,1), inset 0 -1px 4px rbga(0,0,0,1), inset 0px 1px rgba(225,225,225,.1),
+  0 0 0 1px #000,0 0 0 1px #0095ff,0 0 9px 8px #0095ff;
+  }
+
+  .linkid4:hover {
+  color:#0095ff;  
+  }
+
+
+
+
+
+  .card5-container{
+  width:300px;
+  height:400px;
+  border-radius:4px;
+  perspective:980px;
+  background-color:transparent;
+  }
+    
+  .card5{
+  position:relative;
+  width:100%;
+  height:100%;
+  transition:all .7s;
+  transform-style:preserve-3d;
+  }
+    
+  .card5-container:hover .card5{
+  transform:rotateY(-180deg);
+  }
+    
+  .front5{
+  background:linear-gradient(15deg , #4d4ef5 , #72f3ee);
+  }
+    
+  .back5{
+  background:linear-gradient(135deg, #f35efa , #59fbfe);
+  transform:rotateY(-180deg);
+  }
+    
+  .front5 , .back5{
+  position:absolute;
+  width:100%;
+  height:100%;
+  display:flex;
+  /*align-items:center;
+  justify-content:center;*/
+  color:white;
+  border-radius:4px;
+  box-shadow:0 10px 20px rgba(0, 0, 0, .19),
+                         0 6px 6px rgba(0, 0, 0,.23);
+                         backface-visibility:hidden;
+                         }
+
+  .id5{
+  position: absolute;
+  bottom: 110px;
+  left: 50px;
+  /*transform: translateX(-50%);*/
+  }
+  
+  .id5 .spanid5{
+  color:#ffffff;
+  font-size:15px;
+  font-weight:bolder;
+  letter-spacing:1px;
+  animation: light 3s infinite;
+  }
+      
+  @keyframes light{
+      
+    0%, 20%{
+    color:#fee5e9;
+    text-shadow: 0 0 10px #d03f4a;
+    }
+      
+    40%{
+    color:#f4f3f5;
+    text-shadow:0 0 10px #1b3ba8;
+    }
+      
+    60%{
+    color:#caa074;
+    text-shadow:0 0 10px #2f1704;
+    }
+      
+    80%{
+    color:#8a98ae;
+    text-shadow:0 0 10px #283446;
+    }
+      
+    100%{
+    color:#efeeb5;
+    text-shadow:0 0 10px #2a290c;
+    }
+  }
+      
+  .spanid5:nth-child(1){
+  animation-delay: .2s;
+  }
+    
+  .spanid5:nth-child(2){
+  animation-delay: .4s;
+  }
+    
+  .spanid5:nth-child(3){
+  animation-delay: .6;
+  }
+    
+  .spanid5:nth-child(4){
+  animation-delay: .8s;
+  }
+    
+  .spanid5:nth-child(5){
+  animation-delay: 1s;
+  }
+
+  .spanid5:nth-child(6){
+  animation-delay: 1.2s;
+  }
+    
+  .spanid5:nth-child(7){
+  animation-delay: 1.4;
+  }
+    
+  .spanid5:nth-child(8){
+  animation-delay: 1.6s;
+  }
+    
+  .spanid5:nth-child(9){
+  animation-delay: 1.8s;
+  }
+
+  .spanid1:nth-child(10){
+  animation-delay: 2s;
+  }
+    
+  .spanid1:nth-child(11){
+  animation-delay: 2.2;
+  }
+    
+  .spanid1:nth-child(12){
+  animation-delay: 2.4s;
+  }
+    
+  .spanid1:nth-child(13){
+  animation-delay: 2.6s;
+  }
+
+  .img8 {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  top: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  }
+
+  .adminsign5 {
+  position: absolute;
+  bottom: 160px;
+  left: 50%;
+  transform: translateX(-50%);
+  }
+  .adminsign5 .aadminsign5 {
+  text-decoration: none;
+  padding: 10px 30px;
+  color: #3ffc5b;
+  border: solid 3px #3ffc5b;
+  border-radius: 18px;
+  }
+
+  .mottosign5 {
+  position: absolute;
+  bottom: 280px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #3ffc5b;
+  font-size: 30px;
+  }
+
+  .motto5{
+  position: absolute;
+  bottom: 150px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #ec66fa;
+  font-size: 18px;
+  }
+
+  .motto52{
+  position: absolute;
+  bottom: 220px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #ff006a;
+  font-size: 18px;
+  }
+
+  .motto53{
+  position: absolute;
+  bottom: 190px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #ff006a;
+  font-size: 18px;
+  }
+
+  .motto54{
+  position: absolute;
+  bottom: 155px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #ff006a;
+  font-size: 18px;
+  }
+
+  .motto55{
+  position: absolute;
+  bottom: 120px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #ff006a;
+  font-size: 18px;
+  }
+
+  .iconsid5 {
+  position: absolute;
+  bottom: 20px;
+  height: 100px;
+  width: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  }
+  
+  .linkid5{
+  position:relative;
+  display:block;
+  width:40px;
+  height:40px;
+  font-size:20px;
+  line-height:40px;
+  background:#1b1b1b;
+  margin:7px;
+  cursor:pointer;
+  border-radius:50%;
+  text-align:center;
+  box-shadow:0 2px 3px rgba(0,0,0,1), inset 0 -1px 4px rgba(0,0,0,1),
+  inset 1px -1px  4px rgba(0,0,0,1), inset 1px -1px 6px 0  rgba(225,225,225,.5),
+  0 0 1px 1px #000,0 0 1px 4px #0c0c0c,0 0 0 4px #080808;
+  transition:.4s;
+  color: #7e57c2;
+  }
+
+  .linkid5:before{
+  position:absolute:
+  content: " ";
+  top:0;
+  left:0;
+  background:cadetblue;
+  height:100%;
+  width:100%;
+  border-radius:50%;
+  z-index:-2;
+  transform:scale(0.5);
+  transition:0.3s;
+  }
+
+  .linkid5:hover:before{
+  filter:blur(3px);
+  transform:scale(1.2);
+  box-shadow:0 0 9 rgba(0,0,0,1), inset 0 -1px 4px rbga(0,0,0,1), inset 0px 1px rgba(225,225,225,.1),
+  0 0 0 1px #000,0 0 0 1px #0095ff,0 0 9px 8px #0095ff;
+  }
+
+  .linkid5:hover {
+  color:#0095ff;  
+  }
+
+
+
+
+
+  .card6-container{
+  width:300px;
+  height:400px;
+  border-radius:4px;
+  perspective:980px;
+  background-color:transparent;
+  }
+    
+  .card6{
+  position:relative;
+  width:100%;
+  height:100%;
+  transition:all .7s;
+  transform-style:preserve-3d;
+  }
+    
+  .card6-container:hover .card6{
+  transform:rotateY(-180deg);
+  }
+    
+  .front6{
+  background:linear-gradient(135deg , #fe5dfd , #f7fa63);
+  }
+    
+  .back6{
+  background:linear-gradient(135deg, #fc6efa , #fe5758);
+  transform:rotateY(-180deg);
+  }
+    
+  .front6 , .back6{
+  position:absolute;
+  width:100%;
+  height:100%;
+  display:flex;
+  /*align-items:center;
+  justify-content:center;*/
+  color:white;
+  border-radius:4px;
+  box-shadow:0 10px 20px rgba(0, 0, 0, .19),
+                         0 6px 6px rgba(0, 0, 0,.23);
+                         backface-visibility:hidden;
+                         }
+
+  .id6{
+  position: absolute;
+  bottom: 110px;
+  left: 50px;
+  /*transform: translateX(-50%);*/
+  }
+  
+  .id6 .spanid6{
+  color:#ffffff;
+  font-size:15px;
+  font-weight:bolder;
+  letter-spacing:1px;
+  animation: light 3s infinite;
+  }
+      
+  @keyframes light{
+      
+    0%, 20%{
+    color:#fee5e9;
+    text-shadow: 0 0 10px #d03f4a;
+    }
+      
+    40%{
+    color:#f4f3f5;
+    text-shadow:0 0 10px #1b3ba8;
+    }
+      
+    60%{
+    color:#caa074;
+    text-shadow:0 0 10px #2f1704;
+    }
+      
+    80%{
+    color:#8a98ae;
+    text-shadow:0 0 10px #283446;
+    }
+      
+    100%{
+    color:#efeeb5;
+    text-shadow:0 0 10px #2a290c;
+    }
+  }
+      
+  .spanid6:nth-child(1){
+  animation-delay: .2s;
+  }
+    
+  .spanid6:nth-child(2){
+  animation-delay: .4s;
+  }
+    
+  .spanid6:nth-child(3){
+  animation-delay: .6;
+  }
+    
+  .spanid6:nth-child(4){
+  animation-delay: .8s;
+  }
+    
+  .spanid6:nth-child(5){
+  animation-delay: 1s;
+  }
+
+  .spanid6:nth-child(6){
+  animation-delay: 1.2s;
+  }
+    
+  .spanid6:nth-child(7){
+  animation-delay: 1.4;
+  }
+    
+  .spanid6:nth-child(8){
+  animation-delay: 1.6s;
+  }
+    
+  .spanid6:nth-child(9){
+  animation-delay: 1.8s;
+  }
+
+  .spanid1:nth-child(10){
+  animation-delay: 2s;
+  }
+    
+  .spanid1:nth-child(11){
+  animation-delay: 2.2;
+  }
+    
+  .spanid1:nth-child(12){
+  animation-delay: 2.4s;
+  }
+    
+  .spanid1:nth-child(13){
+  animation-delay: 2.6s;
+  }
+
+  .img9 {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  top: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  }
+
+  .adminsign6 {
+  position: absolute;
+  bottom: 160px;
+  left: 50%;
+  transform: translateX(-50%);
+  }
+  .adminsign6 .aadminsign6 {
+  text-decoration: none;
+  padding: 10px 30px;
+  color: #3ffc5b;
+  border: solid 3px #3ffc5b;
+  border-radius: 18px;
+  }
+
+  .mottosign6 {
+  position: absolute;
+  bottom: 280px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #3ffc5b;
+  font-size: 30px;
+  }
+
+  .motto6{
+  position: absolute;
+  bottom: 150px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #ec66fa;
+  font-size: 18px;
+  }
+
+  .motto62{
+  position: absolute;
+  bottom: 220px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #42ecf5;
+  font-size: 18px;
+  }
+
+  .motto63{
+  position: absolute;
+  bottom: 190px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #42ecf5;
+  font-size: 18px;
+  }
+
+  .motto64{
+  position: absolute;
+  bottom: 155px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #42ecf5;
+  font-size: 18px;
+  }
+
+  .motto65{
+  position: absolute;
+  bottom: 120px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #42ecf5;
+  font-size: 18px;
+  }
+
+  .iconsid6 {
+  position: absolute;
+  bottom: 20px;
+  height: 100px;
+  width: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  }
+  
+  .linkid6{
+  position:relative;
+  display:block;
+  width:40px;
+  height:40px;
+  font-size:20px;
+  line-height:40px;
+  background:#1b1b1b;
+  margin:7px;
+  cursor:pointer;
+  border-radius:50%;
+  text-align:center;
+  box-shadow:0 2px 3px rgba(0,0,0,1), inset 0 -1px 4px rgba(0,0,0,1),
+  inset 1px -1px  4px rgba(0,0,0,1), inset 1px -1px 6px 0  rgba(225,225,225,.5),
+  0 0 1px 1px #000,0 0 1px 4px #0c0c0c,0 0 0 4px #080808;
+  transition:.4s;
+  color: #f7979a;
+  }
+
+  .linkid6:before{
+  position:absolute:
+  content: " ";
+  top:0;
+  left:0;
+  background:cadetblue;
+  height:100%;
+  width:100%;
+  border-radius:50%;
+  z-index:-2;
+  transform:scale(0.5);
+  transition:0.3s;
+  }
+
+  .linkid6:hover:before{
+  filter:blur(3px);
+  transform:scale(1.2);
+  box-shadow:0 0 9 rgba(0,0,0,1), inset 0 -1px 4px rbga(0,0,0,1), inset 0px 1px rgba(225,225,225,.1),
+  0 0 0 1px #000,0 0 0 1px #0095ff,0 0 9px 8px #0095ff;
+  }
+
+  .linkid6:hover {
+  color:#0095ff;  
+  }
+
+
+
+
+
+  .card7-container{
+  width:300px;
+  height:400px;
+  border-radius:4px;
+  perspective:980px;
+  background-color:transparent;
+  }
+    
+  .card7{
+  position:relative;
+  width:100%;
+  height:100%;
+  transition:all .7s;
+  transform-style:preserve-3d;
+  }
+    
+  .card7-container:hover .card7{
+  transform:rotateY(-180deg);
+  }
+    
+  .front7{
+  background:linear-gradient(15deg , #4d4ef5 , #72f3ee);
+  }
+    
+  .back7{
+  background:linear-gradient(135deg, #f35efa , #59fbfe);
+  transform:rotateY(-180deg);
+  }
+    
+  .front7 , .back7{
+  position:absolute;
+  width:100%;
+  height:100%;
+  display:flex;
+  /*align-items:center;
+  justify-content:center;*/
+  color:white;
+  border-radius:4px;
+  box-shadow:0 10px 20px rgba(0, 0, 0, .19),
+                         0 6px 6px rgba(0, 0, 0,.23);
+                         backface-visibility:hidden;
+                         }
+
+  .id7{
+  position: absolute;
+  bottom: 110px;
+  left: 50px;
+  /*transform: translateX(-50%);*/
+  }
+  
+  .id7 .spanid7{
+  color:#ffffff;
+  font-size:15px;
+  font-weight:bolder;
+  letter-spacing:1px;
+  animation: light 3s infinite;
+  }
+      
+  @keyframes light{
+      
+    0%, 20%{
+    color:#fee5e9;
+    text-shadow: 0 0 10px #d03f4a;
+    }
+      
+    40%{
+    color:#f4f3f5;
+    text-shadow:0 0 10px #1b3ba8;
+    }
+      
+    60%{
+    color:#caa074;
+    text-shadow:0 0 10px #2f1704;
+    }
+      
+    80%{
+    color:#8a98ae;
+    text-shadow:0 0 10px #283446;
+    }
+      
+    100%{
+    color:#efeeb5;
+    text-shadow:0 0 10px #2a290c;
+    }
+  }
+      
+  .spanid7:nth-child(1){
+  animation-delay: .2s;
+  }
+    
+  .spanid7:nth-child(2){
+  animation-delay: .4s;
+  }
+    
+  .spanid7:nth-child(3){
+  animation-delay: .6;
+  }
+    
+  .spanid7:nth-child(4){
+  animation-delay: .8s;
+  }
+    
+  .spanid7:nth-child(5){
+  animation-delay: 1s;
+  }
+
+  .spanid7:nth-child(6){
+  animation-delay: 1.2s;
+  }
+    
+  .spanid7:nth-child(7){
+  animation-delay: 1.4;
+  }
+    
+  .spanid7:nth-child(8){
+  animation-delay: 1.6s;
+  }
+    
+  .spanid7:nth-child(9){
+  animation-delay: 1.8s;
+  }
+
+  .spanid1:nth-child(10){
+  animation-delay: 2s;
+  }
+    
+  .spanid1:nth-child(11){
+  animation-delay: 2.2;
+  }
+    
+  .spanid1:nth-child(12){
+  animation-delay: 2.4s;
+  }
+    
+  .spanid1:nth-child(13){
+  animation-delay: 2.6s;
+  }
+
+  .img10 {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  top: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  }
+
+  .adminsign7 {
+  position: absolute;
+  bottom: 160px;
+  left: 50%;
+  transform: translateX(-50%);
+  }
+  .adminsign7 .aadminsign7 {
+  text-decoration: none;
+  padding: 10px 30px;
+  color: #3ffc5b;
+  border: solid 3px #3ffc5b;
+  border-radius: 18px;
+  }
+
+  .mottosign7 {
+  position: absolute;
+  bottom: 280px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #3ffc5b;
+  font-size: 30px;
+  }
+
+  .motto7{
+  position: absolute;
+  bottom: 150px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #ec66fa;
+  font-size: 18px;
+  }
+
+  .motto72{
+  position: absolute;
+  bottom: 220px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #ff006a;
+  font-size: 18px;
+  }
+
+  .motto73{
+  position: absolute;
+  bottom: 190px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #ff006a;
+  font-size: 18px;
+  }
+
+  .motto74{
+  position: absolute;
+  bottom: 155px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #ff006a;
+  font-size: 18px;
+  }
+
+  .motto75{
+  position: absolute;
+  bottom: 120px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #ff006a;
+  font-size: 18px;
+  }
+
+  .iconsid7 {
+  position: absolute;
+  bottom: 20px;
+  height: 100px;
+  width: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  }
+  
+  .linkid7{
+  position:relative;
+  display:block;
+  width:40px;
+  height:40px;
+  font-size:20px;
+  line-height:40px;
+  background:#1b1b1b;
+  margin:7px;
+  cursor:pointer;
+  border-radius:50%;
+  text-align:center;
+  box-shadow:0 2px 3px rgba(0,0,0,1), inset 0 -1px 4px rgba(0,0,0,1),
+  inset 1px -1px  4px rgba(0,0,0,1), inset 1px -1px 6px 0  rgba(225,225,225,.5),
+  0 0 1px 1px #000,0 0 1px 4px #0c0c0c,0 0 0 4px #080808;
+  transition:.4s;
+  color: #7e57c2;
+  }
+
+  .linkid7:before{
+  position:absolute:
+  content: " ";
+  top:0;
+  left:0;
+  background:cadetblue;
+  height:100%;
+  width:100%;
+  border-radius:50%;
+  z-index:-2;
+  transform:scale(0.5);
+  transition:0.3s;
+  }
+
+  .linkid7:hover:before{
+  filter:blur(3px);
+  transform:scale(1.2);
+  box-shadow:0 0 9 rgba(0,0,0,1), inset 0 -1px 4px rbga(0,0,0,1), inset 0px 1px rgba(225,225,225,.1),
+  0 0 0 1px #000,0 0 0 1px #0095ff,0 0 9px 8px #0095ff;
+  }
+
+  .linkid7:hover {
+  color:#0095ff;  
+  }
+
+
+
+
+
+  .card8-container{
+  width:300px;
+  height:400px;
+  border-radius:4px;
+  perspective:980px;
+  background-color:transparent;
+  }
+    
+  .card8{
+  position:relative;
+  width:100%;
+  height:100%;
+  transition:all .7s;
+  transform-style:preserve-3d;
+  }
+    
+  .card8-container:hover .card8{
+  transform:rotateY(-180deg);
+  }
+    
+  .front8{
+  background:linear-gradient(135deg , #fe5dfd , #f7fa63);
+  }
+    
+  .back8{
+  background:linear-gradient(135deg, #fc6efa , #fe5758);
+  transform:rotateY(-180deg);
+  }
+    
+  .front8 , .back8{
+  position:absolute;
+  width:100%;
+  height:100%;
+  display:flex;
+  /*align-items:center;
+  justify-content:center;*/
+  color:white;
+  border-radius:4px;
+  box-shadow:0 10px 20px rgba(0, 0, 0, .19),
+                         0 6px 6px rgba(0, 0, 0,.23);
+                         backface-visibility:hidden;
+                         }
+
+  .id8{
+  position: absolute;
+  bottom: 110px;
+  left: 50px;
+  /*transform: translateX(-50%);*/
+  }
+  
+  .id8 .spanid8{
+  color:#ffffff;
+  font-size:15px;
+  font-weight:bolder;
+  letter-spacing:1px;
+  animation: light 3s infinite;
+  }
+      
+  @keyframes light{
+      
+    0%, 20%{
+    color:#fee5e9;
+    text-shadow: 0 0 10px #d03f4a;
+    }
+      
+    40%{
+    color:#f4f3f5;
+    text-shadow:0 0 10px #1b3ba8;
+    }
+      
+    60%{
+    color:#caa074;
+    text-shadow:0 0 10px #2f1704;
+    }
+      
+    80%{
+    color:#8a98ae;
+    text-shadow:0 0 10px #283446;
+    }
+      
+    100%{
+    color:#efeeb5;
+    text-shadow:0 0 10px #2a290c;
+    }
+  }
+      
+  .spanid8:nth-child(1){
+  animation-delay: .2s;
+  }
+    
+  .spanid8:nth-child(2){
+  animation-delay: .4s;
+  }
+    
+  .spanid8:nth-child(3){
+  animation-delay: .6;
+  }
+    
+  .spanid8:nth-child(4){
+  animation-delay: .8s;
+  }
+    
+  .spanid8:nth-child(5){
+  animation-delay: 1s;
+  }
+
+  .spanid8:nth-child(6){
+  animation-delay: 1.2s;
+  }
+    
+  .spanid8:nth-child(7){
+  animation-delay: 1.4;
+  }
+    
+  .spanid8:nth-child(8){
+  animation-delay: 1.6s;
+  }
+    
+  .spanid8:nth-child(9){
+  animation-delay: 1.8s;
+  }
+
+  .spanid1:nth-child(10){
+  animation-delay: 2s;
+  }
+    
+  .spanid1:nth-child(11){
+  animation-delay: 2.2;
+  }
+    
+  .spanid1:nth-child(12){
+  animation-delay: 2.4s;
+  }
+    
+  .spanid1:nth-child(13){
+  animation-delay: 2.6s;
+  }
+  .img11 {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  top: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  }
+
+  .adminsign8 {
+  position: absolute;
+  bottom: 160px;
+  left: 50%;
+  transform: translateX(-50%);
+  }
+  .adminsign8 .aadminsign8 {
+  text-decoration: none;
+  padding: 10px 30px;
+  color: #3ffc5b;
+  border: solid 3px #3ffc5b;
+  border-radius: 18px;
+  }
+
+  .mottosign8 {
+  position: absolute;
+  bottom: 280px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #3ffc5b;
+  font-size: 30px;
+  }
+
+  .motto8{
+  position: absolute;
+  bottom: 150px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #ec66fa;
+  font-size: 18px;
+  }
+
+  .motto82{
+  position: absolute;
+  bottom: 220px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #42ecf5;
+  font-size: 18px;
+  }
+
+  .motto83{
+  position: absolute;
+  bottom: 190px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #42ecf5;
+  font-size: 18px;
+  }
+
+  .motto84{
+  position: absolute;
+  bottom: 155px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #42ecf5;
+  font-size: 18px;
+  }
+
+  .motto85{
+  position: absolute;
+  bottom: 120px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #42ecf5;
+  font-size: 18px;
+  }
+
+  .iconsid8 {
+  position: absolute;
+  bottom: 20px;
+  height: 100px;
+  width: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  }
+  
+  .linkid8{
+  position:relative;
+  display:block;
+  width:40px;
+  height:40px;
+  font-size:20px;
+  line-height:40px;
+  background:#1b1b1b;
+  margin:7px;
+  cursor:pointer;
+  border-radius:50%;
+  text-align:center;
+  box-shadow:0 2px 3px rgba(0,0,0,1), inset 0 -1px 4px rgba(0,0,0,1),
+  inset 1px -1px  4px rgba(0,0,0,1), inset 1px -1px 6px 0  rgba(225,225,225,.5),
+  0 0 1px 1px #000,0 0 1px 4px #0c0c0c,0 0 0 4px #080808;
+  transition:.4s;
+  color: #f7979a;
+  }
+
+  .linkid8:before{
+  position:absolute:
+  content: " ";
+  top:0;
+  left:0;
+  background:cadetblue;
+  height:100%;
+  width:100%;
+  border-radius:50%;
+  z-index:-2;
+  transform:scale(0.5);
+  transition:0.3s;
+  }
+
+  .linkid8:hover:before{
+  filter:blur(3px);
+  transform:scale(1.2);
+  box-shadow:0 0 9 rgba(0,0,0,1), inset 0 -1px 4px rbga(0,0,0,1), inset 0px 1px rgba(225,225,225,.1),
+  0 0 0 1px #000,0 0 0 1px #0095ff,0 0 9px 8px #0095ff;
+  }
+
+  .linkid8:hover {
+  color:#0095ff;  
+  }
+
+
+
+
+
+  .card9-container{
+  width:300px;
+  height:400px;
+  border-radius:4px;
+  perspective:980px;
+  background-color:transparent;
+  }
+    
+  .card9{
+  position:relative;
+  width:100%;
+  height:100%;
+  transition:all .7s;
+  transform-style:preserve-3d;
+  }
+    
+  .card9-container:hover .card9{
+  transform:rotateY(-180deg);
+  }
+    
+  .front9{
+  background:linear-gradient(15deg , #4d4ef5 , #72f3ee);
+  }
+    
+  .back9{
+  background:linear-gradient(135deg, #f35efa , #59fbfe);
+  transform:rotateY(-180deg);
+  }
+    
+  .front9 , .back9{
+  position:absolute;
+  width:100%;
+  height:100%;
+  display:flex;
+  /*align-items:center;
+  justify-content:center;*/
+  color:white;
+  border-radius:4px;
+  box-shadow:0 10px 20px rgba(0, 0, 0, .19),
+                         0 6px 6px rgba(0, 0, 0,.23);
+                         backface-visibility:hidden;
+                         }
+
+  .id9{
+  position: absolute;
+  bottom: 110px;
+  left: 50px;
+  /*transform: translateX(-50%);*/
+  }
+  
+  .id9 .spanid9{
+  color:#ffffff;
+  font-size:15px;
+  font-weight:bolder;
+  letter-spacing:1px;
+  animation: light 3s infinite;
+  }
+      
+  @keyframes light{
+      
+    0%, 20%{
+    color:#fee5e9;
+    text-shadow: 0 0 10px #d03f4a;
+    }
+      
+    40%{
+    color:#f4f3f5;
+    text-shadow:0 0 10px #1b3ba8;
+    }
+      
+    60%{
+    color:#caa074;
+    text-shadow:0 0 10px #2f1704;
+    }
+      
+    80%{
+    color:#8a98ae;
+    text-shadow:0 0 10px #283446;
+    }
+      
+    100%{
+    color:#efeeb5;
+    text-shadow:0 0 10px #2a290c;
+    }
+  }
+      
+  .spanid9:nth-child(1){
+  animation-delay: .2s;
+  }
+    
+  .spanid9:nth-child(2){
+  animation-delay: .4s;
+  }
+    
+  .spanid9:nth-child(3){
+  animation-delay: .6;
+  }
+    
+  .spanid9:nth-child(4){
+  animation-delay: .8s;
+  }
+    
+  .spanid9:nth-child(5){
+  animation-delay: 1s;
+  }
+
+  .spanid9:nth-child(6){
+  animation-delay: 1.2s;
+  }
+    
+  .spanid9:nth-child(7){
+  animation-delay: 1.4;
+  }
+    
+  .spanid9:nth-child(8){
+  animation-delay: 1.6s;
+  }
+    
+  .spanid9:nth-child(9){
+  animation-delay: 1.8s;
+  }
+
+  .spanid1:nth-child(10){
+  animation-delay: 2s;
+  }
+    
+  .spanid1:nth-child(11){
+  animation-delay: 2.2;
+  }
+    
+  .spanid1:nth-child(12){
+  animation-delay: 2.4s;
+  }
+    
+  .spanid1:nth-child(13){
+  animation-delay: 2.6s;
+  }
+
+  .img12 {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  top: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  }
+
+  .adminsign9 {
+  position: absolute;
+  bottom: 160px;
+  left: 50%;
+  transform: translateX(-50%);
+  }
+  .adminsign9 .aadminsign9 {
+  text-decoration: none;
+  padding: 10px 30px;
+  color: #3ffc5b;
+  border: solid 3px #3ffc5b;
+  border-radius: 18px;
+  }
+
+  .mottosign9 {
+  position: absolute;
+  bottom: 280px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #3ffc5b;
+  font-size: 30px;
+  }
+
+  .motto9{
+  position: absolute;
+  bottom: 150px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #ec66fa;
+  font-size: 18px;
+  }
+
+  .motto92{
+  position: absolute;
+  bottom: 220px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #ff006a;
+  font-size: 18px;
+  }
+
+  .motto93{
+  position: absolute;
+  bottom: 190px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #ff006a;
+  font-size: 18px;
+  }
+
+  .motto94{
+  position: absolute;
+  bottom: 155px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #ff006a;
+  font-size: 18px;
+  }
+
+  .motto95{
+  position: absolute;
+  bottom: 120px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #ff006a;
+  font-size: 18px;
+  }
+
+  .iconsid9 {
+  position: absolute;
+  bottom: 20px;
+  height: 100px;
+  width: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  }
+  
+  .linkid9{
+  position:relative;
+  display:block;
+  width:40px;
+  height:40px;
+  font-size:20px;
+  line-height:40px;
+  background:#1b1b1b;
+  margin:7px;
+  cursor:pointer;
+  border-radius:50%;
+  text-align:center;
+  box-shadow:0 2px 3px rgba(0,0,0,1), inset 0 -1px 4px rgba(0,0,0,1),
+  inset 1px -1px  4px rgba(0,0,0,1), inset 1px -1px 6px 0  rgba(225,225,225,.5),
+  0 0 1px 1px #000,0 0 1px 4px #0c0c0c,0 0 0 4px #080808;
+  transition:.4s;
+  color: #7e57c2;
+  }
+
+  .linkid9:before{
+  position:absolute:
+  content: " ";
+  top:0;
+  left:0;
+  background:cadetblue;
+  height:100%;
+  width:100%;
+  border-radius:50%;
+  z-index:-2;
+  transform:scale(0.5);
+  transition:0.3s;
+  }
+
+  .linkid9:hover:before{
+  filter:blur(3px);
+  transform:scale(1.2);
+  box-shadow:0 0 9 rgba(0,0,0,1), inset 0 -1px 4px rbga(0,0,0,1), inset 0px 1px rgba(225,225,225,.1),
+  0 0 0 1px #000,0 0 0 1px #0095ff,0 0 9px 8px #0095ff;
+  }
+
+  .linkid9:hover {
+  color:#0095ff;  
+  }
+
+
+
+
+
+  .card10-container{
+  width:300px;
+  height:400px;
+  border-radius:4px;
+  perspective:980px;
+  background-color:transparent;
+  }
+    
+  .card10{
+  position:relative;
+  width:100%;
+  height:100%;
+  transition:all .7s;
+  transform-style:preserve-3d;
+  }
+    
+  .card10-container:hover .card10{
+  transform:rotateY(-180deg);
+  }
+    
+  .front10{
+  background:linear-gradient(135deg , #fe5dfd , #f7fa63);
+  }
+    
+  .back10{
+  background:linear-gradient(135deg, #fc6efa , #fe5758);
+  transform:rotateY(-180deg);
+  }
+    
+  .front10 , .back10{
+  position:absolute;
+  width:100%;
+  height:100%;
+  display:flex;
+  /*align-items:center;
+  justify-content:center;*/
+  color:white;
+  border-radius:4px;
+  box-shadow:0 10px 20px rgba(0, 0, 0, .19),
+                         0 6px 6px rgba(0, 0, 0,.23);
+                         backface-visibility:hidden;
+                         }
+
+  .id10{
+  position: absolute;
+  bottom: 110px;
+  left: 50px;
+  /*transform: translateX(-50%);*/
+  }
+  
+  .id10 .spanid10{
+  color:#ffffff;
+  font-size:15px;
+  font-weight:bolder;
+  letter-spacing:1px;
+  animation: light 3s infinite;
+  }
+      
+  @keyframes light{
+      
+    0%, 20%{
+    color:#fee5e9;
+    text-shadow: 0 0 10px #d03f4a;
+    }
+      
+    40%{
+    color:#f4f3f5;
+    text-shadow:0 0 10px #1b3ba8;
+    }
+      
+    60%{
+    color:#caa074;
+    text-shadow:0 0 10px #2f1704;
+    }
+      
+    80%{
+    color:#8a98ae;
+    text-shadow:0 0 10px #283446;
+    }
+      
+    100%{
+    color:#efeeb5;
+    text-shadow:0 0 10px #2a290c;
+    }
+  }
+      
+  .spanid10:nth-child(1){
+  animation-delay: .2s;
+  }
+    
+  .spanid10:nth-child(2){
+  animation-delay: .4s;
+  }
+    
+  .spanid10:nth-child(3){
+  animation-delay: .6;
+  }
+    
+  .spanid10:nth-child(4){
+  animation-delay: .8s;
+  }
+    
+  .spanid10:nth-child(5){
+  animation-delay: 1s;
+  }
+
+  .spanid10:nth-child(6){
+  animation-delay: 1.2s;
+  }
+    
+  .spanid10:nth-child(7){
+  animation-delay: 1.4;
+  }
+    
+  .spanid10:nth-child(8){
+  animation-delay: 1.6s;
+  }
+    
+  .spanid10:nth-child(9){
+  animation-delay: 1.8s;
+  }
+
+  .spanid1:nth-child(10){
+  animation-delay: 2s;
+  }
+    
+  .spanid1:nth-child(11){
+  animation-delay: 2.2;
+  }
+    
+  .spanid1:nth-child(12){
+  animation-delay: 2.4s;
+  }
+    
+  .spanid1:nth-child(13){
+  animation-delay: 2.6s;
+  }
+
+  .img13 {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  top: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  }
+
+  .adminsign10 {
+  position: absolute;
+  bottom: 160px;
+  left: 50%;
+  transform: translateX(-50%);
+  }
+  .adminsign10 .aadminsign10 {
+  text-decoration: none;
+  padding: 10px 30px;
+  color: #3ffc5b;
+  border: solid 3px #3ffc5b;
+  border-radius: 18px;
+  }
+
+  .mottosign10 {
+  position: absolute;
+  bottom: 280px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #3ffc5b;
+  font-size: 30px;
+  }
+
+  .motto10{
+  position: absolute;
+  bottom: 150px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #ec66fa;
+  font-size: 18px;
+  }
+
+  .motto102{
+  position: absolute;
+  bottom: 220px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #42ecf5;
+  font-size: 18px;
+  }
+
+  .motto103{
+  position: absolute;
+  bottom: 190px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #42ecf5;
+  font-size: 18px;
+  }
+
+  .motto104{
+  position: absolute;
+  bottom: 155px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #42ecf5;
+  font-size: 18px;
+  }
+
+  .motto105{
+  position: absolute;
+  bottom: 120px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #42ecf5;
+  font-size: 18px;
+  }
+
+  .iconsid10 {
+  position: absolute;
+  bottom: 20px;
+  height: 100px;
+  width: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  }
+  
+  .linkid10{
+  position:relative;
+  display:block;
+  width:40px;
+  height:40px;
+  font-size:20px;
+  line-height:40px;
+  background:#1b1b1b;
+  margin:7px;
+  cursor:pointer;
+  border-radius:50%;
+  text-align:center;
+  box-shadow:0 2px 3px rgba(0,0,0,1), inset 0 -1px 4px rgba(0,0,0,1),
+  inset 1px -1px  4px rgba(0,0,0,1), inset 1px -1px 6px 0  rgba(225,225,225,.5),
+  0 0 1px 1px #000,0 0 1px 4px #0c0c0c,0 0 0 4px #080808;
+  transition:.4s;
+  color: #f7979a;
+  }
+
+  .linkid10:before{
+  position:absolute:
+  content: " ";
+  top:0;
+  left:0;
+  background:cadetblue;
+  height:100%;
+  width:100%;
+  border-radius:50%;
+  z-index:-2;
+  transform:scale(0.5);
+  transition:0.3s;
+  }
+
+  .linkid10:hover:before{
+  filter:blur(3px);
+  transform:scale(1.2);
+  box-shadow:0 0 9 rgba(0,0,0,1), inset 0 -1px 4px rbga(0,0,0,1), inset 0px 1px rgba(225,225,225,.1),
+  0 0 0 1px #000,0 0 0 1px #0095ff,0 0 9px 8px #0095ff;
+  }
+
+  .linkid10:hover {
+  color:#0095ff;  
+  }
+
+  .cardlabel{
+  font-size: 15px;
+  /*bottom: 15px;
+  left: 1px;*/
+  }
+
+
+
+
+
+
+
+
+
+
+  </style>
+</head>
+<body class="bgcolor">
+
+<div class="jumbotron text-center bgcolor" style="margin-bottom:0">
+  <img class="img1" src="MainLabel.JPG">
+</div>
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <a class="navbar-brand">Navbar</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="S4.html">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="S4Admins.html">Admins</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" href="S4Moderators.html">Moderators</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="S4Threads.html">Top Threads</a>
+      </li>    
+      <li class="nav-item">
+        <a class="nav-link" href="S4Threaders.html">Top Threaders / Writers</a>
+      </li>  
+      <li class="nav-item">
+        <a class="nav-link" href="S4Readers.html">Top Readers</a>
+      </li>  
+      <li class="nav-item">
+        <a class="nav-link" href="S4LogInAndSignUp.html">Log In / Sign Up</a>
+      </li>  
+      <li class="nav-item">
+        <a class="nav-link" href="S4Contact.html">Contact Us</a>
+      </li> 
+    </ul>
+  </div>  
+</nav>
+
+<div class="outs divclock">
+   
+      <h2 class="h2time" style="margin-top: 10vh">Top Moderators</h2>
+      <h2 class="h2time" style="margin-top: 10vh">Live Time</h2>
+      <hr class="d-sm-none">
+      <div id = "clock" class="divclock" style="display:inline-block">
+      <div id = "time" class="divclock">
+      <div class="divclock"><span class="spanclock" id = "hour">00</span><span class="spanclock">Hours</span></div>
+      <div class="divclock"><span class="spanclock" id = "minutes">00</span><span class="spanclock">Minutes</span></div>
+      <div class="divclock"><span class="spanclock" id = "seconds">00</span><span class="spanclock">Seconds</span></div>
+      </div>
+      </div>  
+      
+      <a class="nav-link disabled atime" href="#"><p class="transcolor ptime">.</p></a>
+      <a class="nav-link disabled atime" href="#"><p class="transcolor ptime">.</p></a>
+    
+
+
+
+
+
+
+
+
+
+<div class = "card1-container ins">
+  <div class = "card1"> 
+    <div class = "front1">
+      <img class="img4" src="BoyIcon.png" alt="" />
+      <h4 class="adminsign1"><a class="aadminsign1">Moderators</a></h4>                   
+        <div class="id1">
+          <span class="spanid1">M</span>
+          <span class="spanid1">O</span>
+          <span class="spanid1">D</span>
+          <span class="spanid1">E</span>
+          <span class="spanid1">R</span>
+          <span class="spanid1">A</span>
+          <span class="spanid1">T</span>
+          <span class="spanid1">O</span>
+          <span class="spanid1">R</span>
+          <span class="spanid1">N</span>
+          <span class="spanid1">A</span>
+          <span class="spanid1">M</span>
+          <span class="spanid1">E</span>
+        </div>              
+      <p class="cardlabel">Click the card for more info</p>
+    </div>
+    <div class = "back1">
+        <a class="mottosign1">Motto</a>
+        <p class="motto12">Blablabla</p>
+        <p class="motto13">Blablabla</p>
+        <p class="motto14">Blablabla</p>
+        <p class="motto15">Blablabla</p>       
+      <div class="iconsid1">	
+        <a href="#" class="linkid1"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="linkid1"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="linkid1"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="linkid1"><i class="fab fa-whatsapp"></i></a>	
+      </div>  
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<div class = "card2-container ins">
+  <div class = "card2"> 
+    <div class = "front2">
+      <img class="img5" src="GirlIcon.png" alt="" />
+      <h4 class="adminsign2"><a class="aadminsign2">Moderators</a></h4>                   
+        <div class="id2">
+          <span class="spanid2">M</span>
+          <span class="spanid2">O</span>
+          <span class="spanid2">D</span>
+          <span class="spanid2">E</span>
+          <span class="spanid2">R</span>
+          <span class="spanid2">A</span>
+          <span class="spanid2">T</span>
+          <span class="spanid2">O</span>
+          <span class="spanid2">R</span>
+          <span class="spanid2">N</span>
+          <span class="spanid2">A</span>
+          <span class="spanid2">M</span>
+          <span class="spanid2">E</span>
+        </div>              
+      <p class="cardlabel">Click the card for more info</p>
+    </div>
+    <div class = "back2">
+        <a class="mottosign2">Motto</a>
+        <p class="motto22">Blablabla</p>
+        <p class="motto23">Blablabla</p>
+        <p class="motto24">Blablabla</p>
+        <p class="motto25">Blablabla</p>       
+      <div class="iconsid2">	
+        <a href="#" class="linkid2"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="linkid2"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="linkid2"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="linkid2"><i class="fab fa-whatsapp"></i></a>	
+      </div>  
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<div class = "card3-container ins">
+  <div class = "card3"> 
+    <div class = "front3">
+      <img class="img6" src="BoyIcon.png" alt="" />
+      <h4 class="adminsign3"><a class="aadminsign3">Moderators</a></h4>                   
+        <div class="id3">
+          <span class="spanid3">M</span>
+          <span class="spanid3">O</span>
+          <span class="spanid3">D</span>
+          <span class="spanid3">E</span>
+          <span class="spanid3">R</span>
+          <span class="spanid3">A</span>
+          <span class="spanid3">T</span>
+          <span class="spanid3">O</span>
+          <span class="spanid3">R</span>
+          <span class="spanid3">N</span>
+          <span class="spanid3">A</span>
+          <span class="spanid3">M</span>
+          <span class="spanid3">E</span>
+        </div>              
+      <p class="cardlabel">Click the card for more info</p>
+    </div>
+    <div class = "back3">
+        <a class="mottosign3">Motto</a>
+        <p class="motto32">Blablabla</p>
+        <p class="motto33">Blablabla</p>
+        <p class="motto34">Blablabla</p>
+        <p class="motto35">Blablabla</p>       
+      <div class="iconsid3">	
+        <a href="#" class="linkid3"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="linkid3"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="linkid3"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="linkid3"><i class="fab fa-whatsapp"></i></a>	
+      </div>  
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<div class = "card4-container ins">
+  <div class = "card4"> 
+    <div class = "front4">
+      <img class="img7" src="GirlIcon.png" alt="" />
+      <h4 class="adminsign4"><a class="aadminsign4">Moderators</a></h4>                   
+        <div class="id4">
+          <span class="spanid4">M</span>
+          <span class="spanid4">O</span>
+          <span class="spanid4">D</span>
+          <span class="spanid4">E</span>
+          <span class="spanid4">R</span>
+          <span class="spanid4">A</span>
+          <span class="spanid4">T</span>
+          <span class="spanid4">O</span>
+          <span class="spanid4">R</span>
+          <span class="spanid4">N</span>
+          <span class="spanid4">A</span>
+          <span class="spanid4">M</span>
+          <span class="spanid4">E</span>
+        </div>              
+      <p class="cardlabel">Click the card for more info</p>
+    </div>
+    <div class = "back4">
+        <a class="mottosign4">Motto</a>
+        <p class="motto42">Blablabla</p>
+        <p class="motto43">Blablabla</p>
+        <p class="motto44">Blablabla</p>
+        <p class="motto45">Blablabla</p>       
+      <div class="iconsid4">	
+        <a href="#" class="linkid4"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="linkid4"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="linkid4"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="linkid4"><i class="fab fa-whatsapp"></i></a>	
+      </div>  
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<div class = "card5-container ins">
+  <div class = "card5"> 
+    <div class = "front5">
+      <img class="img8" src="BoyIcon.png" alt="" />
+      <h4 class="adminsign5"><a class="aadminsign5">Moderators</a></h4>                   
+        <div class="id5">
+          <span class="spanid5">M</span>
+          <span class="spanid5">O</span>
+          <span class="spanid5">D</span>
+          <span class="spanid5">E</span>
+          <span class="spanid5">R</span>
+          <span class="spanid5">A</span>
+          <span class="spanid5">T</span>
+          <span class="spanid5">O</span>
+          <span class="spanid5">R</span>
+          <span class="spanid5">N</span>
+          <span class="spanid5">A</span>
+          <span class="spanid5">M</span>
+          <span class="spanid5">E</span>
+        </div>              
+      <p class="cardlabel">Click the card for more info</p>
+    </div>
+    <div class = "back5">
+        <a class="mottosign5">Motto</a>
+        <p class="motto52">Blablabla</p>
+        <p class="motto53">Blablabla</p>
+        <p class="motto54">Blablabla</p>
+        <p class="motto55">Blablabla</p>       
+      <div class="iconsid5">	
+        <a href="#" class="linkid5"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="linkid5"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="linkid5"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="linkid5"><i class="fab fa-whatsapp"></i></a>	
+      </div>  
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<div class = "card6-container ins">
+  <div class = "card6"> 
+    <div class = "front6">
+      <img class="img9" src="GirlIcon.png" alt="" />
+      <h4 class="adminsign6"><a class="aadminsign6">Moderators</a></h4>                   
+        <div class="id6">
+          <span class="spanid6">M</span>
+          <span class="spanid6">O</span>
+          <span class="spanid6">D</span>
+          <span class="spanid6">E</span>
+          <span class="spanid6">R</span>
+          <span class="spanid6">A</span>
+          <span class="spanid6">T</span>
+          <span class="spanid6">O</span>
+          <span class="spanid6">R</span>
+          <span class="spanid6">N</span>
+          <span class="spanid6">A</span>
+          <span class="spanid6">M</span>
+          <span class="spanid6">E</span>
+        </div>            
+      <p class="cardlabel">Click the card for more info</p>  
+    </div>
+    <div class = "back6">
+        <a class="mottosign6">Motto</a>
+        <p class="motto62">Blablabla</p>
+        <p class="motto63">Blablabla</p>
+        <p class="motto64">Blablabla</p>
+        <p class="motto65">Blablabla</p>       
+      <div class="iconsid6">	
+        <a href="#" class="linkid6"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="linkid6"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="linkid6"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="linkid6"><i class="fab fa-whatsapp"></i></a>	
+      </div>  
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<div class = "card7-container ins">
+  <div class = "card7"> 
+    <div class = "front7">
+      <img class="img10" src="BoyIcon.png" alt="" />
+      <h4 class="adminsign7"><a class="aadminsign7">Moderators</a></h4>                   
+        <div class="id7">
+          <span class="spanid7">M</span>
+          <span class="spanid7">O</span>
+          <span class="spanid7">D</span>
+          <span class="spanid7">E</span>
+          <span class="spanid7">R</span>
+          <span class="spanid7">A</span>
+          <span class="spanid7">T</span>
+          <span class="spanid7">O</span>
+          <span class="spanid7">R</span>
+          <span class="spanid7">N</span>
+          <span class="spanid7">A</span>
+          <span class="spanid7">M</span>
+          <span class="spanid7">E</span>
+        </div>              
+      <p class="cardlabel">Click the card for more info</p>
+    </div>
+    <div class = "back7">
+        <a class="mottosign7">Motto</a>
+        <p class="motto72">Blablabla</p>
+        <p class="motto73">Blablabla</p>
+        <p class="motto74">Blablabla</p>
+        <p class="motto75">Blablabla</p>       
+      <div class="iconsid7">	
+        <a href="#" class="linkid7"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="linkid7"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="linkid7"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="linkid7"><i class="fab fa-whatsapp"></i></a>	
+      </div>  
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<div class = "card8-container ins">
+  <div class = "card8"> 
+    <div class = "front8">
+      <img class="img11" src="GirlIcon.png" alt="" />
+      <h4 class="adminsign8"><a class="aadminsign8">Moderators</a></h4>                   
+        <div class="id8">
+          <span class="spanid8">M</span>
+          <span class="spanid8">O</span>
+          <span class="spanid8">D</span>
+          <span class="spanid8">E</span>
+          <span class="spanid8">R</span>
+          <span class="spanid8">A</span>
+          <span class="spanid8">T</span>
+          <span class="spanid8">O</span>
+          <span class="spanid8">R</span>
+          <span class="spanid8">N</span>
+          <span class="spanid8">A</span>
+          <span class="spanid8">M</span>
+          <span class="spanid8">E</span>
+        </div>              
+      <p class="cardlabel">Click the card for more info</p>
+    </div>
+    <div class = "back8">
+        <a class="mottosign8">Motto</a>
+        <p class="motto82">Blablabla</p>
+        <p class="motto83">Blablabla</p>
+        <p class="motto84">Blablabla</p>
+        <p class="motto85">Blablabla</p>       
+      <div class="iconsid8">	
+        <a href="#" class="linkid8"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="linkid8"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="linkid8"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="linkid8"><i class="fab fa-whatsapp"></i></a>	
+      </div>  
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<div class = "card9-container ins">
+  <div class = "card9"> 
+    <div class = "front9">
+      <img class="img12" src="BoyIcon.png" alt="" />
+      <h4 class="adminsign9"><a class="aadminsign9">Moderators</a></h4>                   
+        <div class="id9">
+          <span class="spanid9">M</span>
+          <span class="spanid9">O</span>
+          <span class="spanid9">D</span>
+          <span class="spanid9">E</span>
+          <span class="spanid9">R</span>
+          <span class="spanid9">A</span>
+          <span class="spanid9">T</span>
+          <span class="spanid9">O</span>
+          <span class="spanid9">R</span>
+          <span class="spanid9">N</span>
+          <span class="spanid9">A</span>
+          <span class="spanid9">M</span>
+          <span class="spanid9">E</span>
+        </div>              
+      <p class="cardlabel">Click the card for more info</p>
+    </div>
+    <div class = "back9">
+        <a class="mottosign9">Motto</a>
+        <p class="motto92">Blablabla</p>
+        <p class="motto93">Blablabla</p>
+        <p class="motto94">Blablabla</p>
+        <p class="motto95">Blablabla</p>       
+      <div class="iconsid9">	
+        <a href="#" class="linkid9"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="linkid9"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="linkid9"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="linkid9"><i class="fab fa-whatsapp"></i></a>	
+      </div>  
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<div class = "card10-container ins">
+  <div class = "card10"> 
+    <div class = "front10">
+      <img class="img13" src="GirlIcon.png" alt="" />
+      <h4 class="adminsign10"><a class="aadminsign10">Moderators</a></h4>                   
+        <div class="id10">
+          <span class="spanid10">M</span>
+          <span class="spanid10">O</span>
+          <span class="spanid10">D</span>
+          <span class="spanid10">E</span>
+          <span class="spanid10">R</span>
+          <span class="spanid10">A</span>
+          <span class="spanid10">T</span>
+          <span class="spanid10">O</span>
+          <span class="spanid10">R</span>
+          <span class="spanid10">N</span>
+          <span class="spanid10">A</span>
+          <span class="spanid10">M</span>
+          <span class="spanid10">E</span>
+        </div>              
+      <p class="cardlabel">Click the card for more info</p>
+    </div>
+    <div class = "back10">
+        <a class="mottosign10">Motto</a>
+        <p class="motto102">Blablabla</p>
+        <p class="motto103">Blablabla</p>
+        <p class="motto104">Blablabla</p>
+        <p class="motto105">Blablabla</p>       
+      <div class="iconsid10">	
+        <a href="#" class="linkid10"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="linkid10"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="linkid10"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="linkid10"><i class="fab fa-whatsapp"></i></a>	
+      </div>  
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+</div>
+
+<div class="container"></div>
+    <footer class="footer">
+      <!-- Footer main -->
+      <section class="ft-main">
+        <div class="ft-main-item">
+          <h2 class="ft-title">About</h2>
+            <h6>This is the Official Website of A Thread Community. The</h6>
+            <h6>purpose of A Thread Community is to entertain and to</h6>
+            <h6>encourage you to boost your hidden reading and writing</h6>
+            <h6>skills. Join us now by Signing Up and Subscribing to this</h6>
+            <h6>website.</h6>
+        </div>
+        <div class="ft-main-item">
+          <h2 class="ft-title">Group Pages</h2>
+          <ul class="ul nav nav-pills flex-column"">
+            <li class="lifoot"><a class="a" href="https://www.facebook.com/groups/221590219060567/?ref=share">A Thread Official</a></li>
+            <li class="lifoot"><a class="a" href="https://www.facebook.com/groups/2879416018845200/?ref=share">A Thread SPG</a></li>
+            <li class="lifoot"><a class="a" href="https://www.facebook.com/groups/2914412948639656/?ref=share">A Thread Diary</a></li>
+            <li class="nav-item lifoot"><a class="disabled"><del>A Thread Horror</del></a></li>
+          </ul>
+        </div>
+        <div class="ft-main-item">
+          <h2 class="ft-title">Contact us by</h2>
+          <ul class="ul">
+            <li class="lifoot"><a class="a" href="#">Log In</a></li>
+            <li class="lifoot"><a class="a" href="#">Sign Up</a></li>
+            <li class="lifoot"><a class="a" href="#">Subscribe</a></li>
+          </ul>
+        </div>
+        <div class="ft-main-item">
+          <h2 class="ft-title">Stay Updated</h2>
+          <p>Subscribe to our Website to get our latest news.</p>
+          <form class="form">
+            <input class="input" type="email" name="email" placeholder="Enter email address">
+            <input class="input" type="submit" value="Subscribe">
+          </form>
+        </div>
+      </section>
+     
+      <!-- Footer social -->
+      <section class="ft-social">
+        <ul class="ft-social-list ul">
+          <li class="lifoot"><a href="#"><i class="fab fa-facebook a"></i></a></li>
+          <li class="lifoot"><a href="#"><i class="fab fa-twitter a"></i></a></li>
+          <li class="lifoot"><a href="#"><i class="fab fa-instagram a"></i></a></li>
+          <li class="lifoot"><a href="#"><i class="fab fa-github a"></i></a></li>
+          <li class="lifoot"><a href="#"><i class="fab fa-linkedin a"></i></a></li>
+          <li class="lifoot"><a href="#"><i class="fab fa-youtube a"></i></a></li>
+        </ul>
+      </section>
+     
+      <!-- Footer legal -->
+      <section class="ft-legal">
+        <ul class="ft-legal-list ul">
+          <li class="lifoot"><a class="a" href="#">Terms &amp; Conditions</a></li>
+          <li class="lifoot"><a class="a" href="#">Privacy Policy</a></li>
+          <li class="lifoot">&copy; 2020 A Thread Team.</li>
+        </ul>
+      </section>
+    </footer>
+
+</body>
+</html>
+
+
+
+
+
+<script >
+function clock(){
+
+var hours = document.getElementById('hour');
+var minutes = document.getElementById('minutes');
+var seconds = document.getElementById('seconds');
+
+var h = new Date().getHours();
+var m = new Date().getMinutes();
+var s = new Date().getSeconds();
+
+
+hours.innerHTML = h;
+minutes.innerHTML = m;
+seconds.innerHTML = s;
+}
+
+var interval = setInterval(clock, 1000);
+
+</script>
+
+
+
+
